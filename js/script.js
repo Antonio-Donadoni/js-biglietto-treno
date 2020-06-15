@@ -25,11 +25,13 @@ prezzoBase = (kilometri * 0.21);
 if (eta < 18) {
 prezzoMinorenni = (prezzoBase / 100*80).toFixed(2);
 document.getElementById('ticket-price').innerHTML = "€ " + prezzoMinorenni;
+document.getElementById('discount').innerHTML = "Sconto -20% minorenni effettuato";
 }
 //  ASSEGNARE EVENTUALE SCONTO ANZIANI
 else if (eta > 65) {
   prezzoAnziani = (prezzoBase / 100*60).toFixed(2);
   document.getElementById('ticket-price').innerHTML = "€ " + prezzoAnziani;
+  document.getElementById('discount').innerHTML = "Sconto -40% anziani effettuato";
 }
 else {
   document.getElementById('ticket-price').innerHTML = "€ " + prezzoBase;
