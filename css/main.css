@@ -23,35 +23,56 @@
 }
 
 .main-container{
+  position: relative;
   height: calc(100vh - 150px);
+}
+.main-container::before{
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-image: url("../img/train-station.jfif");
+  background-position: bottom;
+  background-size: cover;
+  filter:  opacity(20%) sepia(30%);
+}
+
+.main-container-wrapper {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-
+  flex-wrap: wrap;
+  height: 100%;
 }
+
 .main-container h3 {
-  font-size: 3rem;
+  font-size: 2.3rem;
   padding: 2rem;
   padding-right: 50px;
   color: #006634;
   font-weight: bold;
+  text-shadow: 1px 1px #2b2d42;
 }
+
 .price-container h4 {
   font-size: 1rem;
   color: red;
   text-transform: uppercase;
+  text-shadow: 1px 1px darkred;
 }
 
 #ticket-price {
-  font-size:3rem;
+  font-size:2.3rem;
   padding: 2rem;
   color: #333;
-  border: outset 5px #51a451;
+  border: outset 5px #006634;
   color: #2b2d42;
   background-color: #edf2f4;
   font-weight: bold;
   text-align: center;
 }
+
 .buttons-container {
   display: flex;
   flex-direction: column;
@@ -59,14 +80,20 @@
   align-items: center;
   padding-left: 30px;
 }
+
 .buttons-container a:first-child {
   font-size: 1.3rem;
   padding: 10px;
   border-radius: 4px;
-  background-image: linear-gradient(to bottom,#51a451,#3a753a);
+  background-image: linear-gradient(to bottom,#51a451,#006634);
   border: solid 1px #333;
   color: #edf2f4;
   margin-bottom: 12px;
+  transition: all 0.2s;
+}
+.buttons-container a:first-child:hover{
+  background-image: linear-gradient(to bottom,#006634,#006634);
+  color: #a8acad;
   cursor: pointer;
 }
 
@@ -78,5 +105,26 @@
   border: outset 1px #333;
   color: #333;
   text-decoration: none;
+  transition: all 2.2s ;
+}
+
+.buttons-container a:last-child:hover {
+  background-image: linear-gradient(to bottom,#e6e6e6,#a8acad);
+  color: #333;
   cursor: pointer;
+}
+
+@media screen and (max-width:992px) {
+
+  .main-container h3 {
+    width: 100%;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+
+  .main-container{
+    justify-content: center;
+    align-items: flex-start;
+  }
+
 }
