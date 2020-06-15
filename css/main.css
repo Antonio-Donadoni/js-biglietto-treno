@@ -12,7 +12,7 @@
   justify-content: center;
   align-items: center;
   font-size: 1.2rem;
-  color: #BBB;
+  color: #edf2f4;
   background-color:#006634;
   text-shadow: 1px 1px #2b2d42;
   border-bottom: 1px solid #2b2d42;
@@ -23,10 +23,10 @@
 }
 
 .main-container{
+  height: calc(100vh - 150px);
   display: flex;
   justify-content: center;
-  align-items: flex-start;
-  padding-top: 30px;
+  align-items: center;
 
 }
 .main-container h3 {
@@ -41,12 +41,42 @@
   color: red;
   text-transform: uppercase;
 }
+
 #ticket-price {
   font-size:3rem;
   padding: 2rem;
-  border: outset 5px  #006634;
+  color: #333;
+  border: outset 5px #51a451;
   color: #2b2d42;
   background-color: #edf2f4;
   font-weight: bold;
   text-align: center;
+}
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding-left: 30px;
+}
+.buttons-container a:first-child {
+  font-size: 1.3rem;
+  padding: 10px;
+  border-radius: 4px;
+  background-image: linear-gradient(to bottom,#51a451,#3a753a);
+  border: solid 1px #333;
+  color: #edf2f4;
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+
+.buttons-container a:last-child {
+  font-size: 1rem;
+  padding: 10px;
+  border-radius: 4px;
+  background-image: linear-gradient(to bottom,#fff,#e6e6e6);
+  border: outset 1px #333;
+  color: #333;
+  text-decoration: none;
+  cursor: pointer;
 }
